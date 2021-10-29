@@ -669,5 +669,21 @@ section{
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-    }            
+    } 
+    .order_list{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .order_list__item{
+        width: 100%;
+        margin-top: 20px;
+    }      
+    .right_dot::before{
+        display: block;
+    }
+    .left_dot::after{
+        display: block;
+    }
+ 
 }
