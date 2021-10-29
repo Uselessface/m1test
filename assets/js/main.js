@@ -1,12 +1,6 @@
 
 
 $(document).ready(function () {
-
-    $('.catalog_item__info__suzes').on('click', 'li:not(.active_size)', function() {
-    $(this)
-    .addClass('active_size').siblings().removeClass('active_size')
-    });  
-
     $('.slider-carousel').slick({
       autoplay: true,
       arrows: false,
@@ -31,8 +25,7 @@ $(document).ready(function () {
       pauseOnFocus: false,
       pauseOnHover: false
     });
-  });
-  $(document).ready(function() {
+
     (function($) {
       $(function() {
     
@@ -42,7 +35,7 @@ $(document).ready(function () {
           .closest('.block_4').find('div.catalog_container').removeClass('active_catalog').eq($(this).index()).addClass('active_catalog');
         });
       });
-    });
+    })(jQuery);
 
     $('li.catalog_item').click('.popup_open', function(){
       let src = $(this).find('img').attr('src');
@@ -51,8 +44,7 @@ $(document).ready(function () {
       $('.popup_name').text(header);
       $('.popup').fadeIn();
       return false;
-    });	
-
+    });
     $('.close_popup').click(function() {
       $(this).parents('.popup').fadeOut();
       return false;
